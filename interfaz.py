@@ -3,6 +3,7 @@ import time
 import sys
 from PyQt5 import uic, QtWidgets, QtCore, QtGui
 from base_calculator import validator, convert_number_system
+from ipaddress import dirHost, dirNetwork
 sys.path.append(".")
 
 # qtCreatorFile = "compilador/interfaz/interfazQT.ui" # Nombre del archivo aquí.
@@ -18,7 +19,31 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
         self.btnConvert.clicked.connect(self.ConvertBases)
+        self.btnCalcHost.clicked.connect(self.ConvertipHost)
+        self.btnCalcRed.clicked.connect(self.ConvertipRed)
         self.comboEnd.setCurrentIndex(1)
+
+    def ConvertipHost(self):
+        ip = self.ipHost.text()
+        data = dirHost(ip)
+        self.hDirRed.setText(data[0])
+        self.hDirBroad.setText(data[1])
+        self.hCant.setText(str(data[2]))
+        self.hRange.setText(data[3]+"   -   "+data[3])
+        print(data)
+
+    def ConvertipRed(self):
+        ip = self.ipRed.text()
+        data = dirNetwork(ip)
+        self.rMasc.setText(str(data[0]))
+        self.rBroad.setText(str(data[1]))
+        self.rCantRed.setText(str(data[2]))
+        self.rCantHosts.setText(str(data[3]))
+        self.rCantHostsAsing.setText(str(data[4]))
+        self.rDirRed.setText(str(data[5][0]))
+        self.rRange.setText(str(data[5]))
+
+        print(dirNetwork(ip))
 
     def ConvertBases(self):
         user_number = self.numConvert.text()

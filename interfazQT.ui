@@ -188,7 +188,7 @@
       <rect>
        <x>20</x>
        <y>110</y>
-       <width>71</width>
+       <width>81</width>
        <height>16</height>
       </rect>
      </property>
@@ -258,10 +258,10 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>220</y>
       <width>641</width>
-      <height>71</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -288,9 +288,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>290</y>
+      <y>260</y>
       <width>651</width>
-      <height>471</height>
+      <height>501</height>
      </rect>
     </property>
     <property name="title">
@@ -327,7 +327,7 @@
 en formato simplificado </string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="ipHost">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -347,7 +347,7 @@ en formato simplificado </string>
        <rect>
         <x>10</x>
         <y>130</y>
-        <width>161</width>
+        <width>171</width>
         <height>16</height>
        </rect>
       </property>
@@ -378,7 +378,7 @@ en formato simplificado </string>
        <string>La dirección de broadcast de la red:</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="btnCalcHost">
       <property name="geometry">
        <rect>
         <x>80</x>
@@ -412,15 +412,15 @@ en formato simplificado </string>
       </property>
       <property name="text">
        <string>La cantidad de hosts que podrían estar 
- en la red.</string>
+en la red:</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_12">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>10</x>
         <y>300</y>
-        <width>261</width>
+        <width>251</width>
         <height>31</height>
        </rect>
       </property>
@@ -431,7 +431,87 @@ en formato simplificado </string>
       </property>
       <property name="text">
        <string>El rango de direcciones IP asignables a  
- los hosts en la red.</string>
+los hosts en la red:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="hDirRed">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>171</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="hDirBroad">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>171</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="hCant">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>171</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="hRange">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>340</y>
+        <width>241</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </widget>
@@ -441,7 +521,7 @@ en formato simplificado </string>
        <x>290</x>
        <y>20</y>
        <width>351</width>
-       <height>441</height>
+       <height>471</height>
       </rect>
      </property>
      <property name="title">
@@ -466,7 +546,7 @@ en formato simplificado </string>
 en formato simplificado </string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_4">
+     <widget class="QLineEdit" name="ipRed">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -481,30 +561,12 @@ en formato simplificado </string>
        </font>
       </property>
      </widget>
-     <widget class="QLabel" name="label_19">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>130</y>
-        <width>241</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Máscara de subred en formato decimal.</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_20">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>180</y>
-        <width>181</width>
+        <y>160</y>
+        <width>261</width>
         <height>16</height>
        </rect>
       </property>
@@ -517,7 +579,7 @@ en formato simplificado </string>
        <string>Dirección de broadcast en esa red.</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="btnCalcRed">
       <property name="geometry">
        <rect>
         <x>120</x>
@@ -594,7 +656,7 @@ hosts en la red.</string>
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>320</y>
+        <y>360</y>
         <width>331</width>
         <height>21</height>
        </rect>
@@ -608,12 +670,12 @@ hosts en la red.</string>
        <string>Rango completo de direcciones </string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_25">
+     <widget class="QLabel" name="label_26">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>380</y>
-        <width>331</width>
+        <y>120</y>
+        <width>321</width>
         <height>16</height>
        </rect>
       </property>
@@ -623,7 +685,155 @@ hosts en la red.</string>
        </font>
       </property>
       <property name="text">
-       <string>Las direcciones que se pueden asignar a los hosts </string>
+       <string>Máscara de subred en formato decimal.</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="rMasc">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>261</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="rBroad">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>261</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="rCantRed">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>210</y>
+        <width>161</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="rCantHosts">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>240</y>
+        <width>161</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="rCantHostsAsing">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>290</y>
+        <width>161</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>320</y>
+        <width>331</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Dirección de la red</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="rDirRed">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>320</y>
+        <width>161</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="rRange">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>390</y>
+        <width>331</width>
+        <height>71</height>
+       </rect>
       </property>
      </widget>
     </widget>

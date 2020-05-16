@@ -10,13 +10,14 @@ rango de direcciones hosts asignables
 
 def dirHost(ipHost):
     ipNetwork = ipaddress.ip_network(ipHost, strict=False)  # Direccion de red
+    dirBroadcast = ipNetwork.broadcast_address  # direccion de broadcast
     hosts = list(ipNetwork.hosts())  # Lista de host de la red
     hostNumber = len(hosts)+2  # numero de host de la red
     # rango de direcciones
     minDir = hosts[0]  # direccion de primer host asignable
     maxDir = hosts[-1]  # direccion del ultimo host asignable
 
-    return ipNetwork.compressed, hostNumber, minDir.compressed, maxDir.compressed
+    return ipNetwork.compressed, dirBroadcast.compressed, hostNumber, minDir.compressed, maxDir.compressed
 
 
 """
